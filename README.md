@@ -1,175 +1,135 @@
-# Cybersecurity-Roadmap
-**โครงสร้างระบบการเรียนรู้สาย Network & Offensive Security**
-
-**1. หมวดเครือข่ายและโครงสร้างพื้นฐานระดับองค์กร (Networking & Infrastructure)**
-
-* **Computer Networking: A Top-Down Approach (8th Edition, 2021)**
-  * **เป้าหมาย:** ทำความเข้าใจโพรโทคอลเครือข่ายสมัยใหม่ วิเคราะห์ Traffic
-  * **จุดเด่น:** ระเบียบวิธี Top-Down ตัดความซับซ้อนนามธรรมออก
-  * **อ้างอิง:** [สไลด์ประกอบการสอน](https://gaia.cs.umass.edu/kurose_ross/ppt.php)
-
-
-* **Site Reliability Engineering: How Google Runs Production Systems (1st Edition, 2016)**
-  * **เป้าหมาย:** จัดการวงจรชีวิตโครงสร้างพื้นฐานด้วยข้อมูลและคณิตศาสตร์
-  * **จุดเด่น:** การจัดการ Hybrid Cloud, การบังคับใช้ SLOs, Fault Tolerance
-  * **อ้างอิง:** [อ่านออนไลน์ฟรี](https://sre.google/books/)
-
-
-* **วิดีโอประกอบการศึกษา (YouTube):**
-  * [Jeremy's IT Lab](https://www.youtube.com/@JeremysITLab) (เจาะลึกเครือข่าย/Cisco)
-  * [NetworkChuck](https://www.youtube.com/@NetworkChuck) (ภาพรวมเทคโนโลยีและ IT)
-
-
-
-**2. หมวดแพลตฟอร์มฝึกฝนความปลอดภัยทางไซเบอร์ (Cybersecurity Platforms)**
-
-* **การอุดรอยรั่วและเว็บแอปพลิเคชัน (Web Security):**
-  * **OWASP Top 10 Project:** มาตรฐานช่องโหว่เว็บระดับโลก [เอกสารอ้างอิง](https://owasp.org/www-project-top-ten/)
-  * **PortSwigger Web Security Academy:** แพลตฟอร์มปฏิบัติการอันดับหนึ่งสำหรับ Web Penetration Tester ห้ามข้ามเด็ดขาด [ทดลองเจาะระบบ](https://portswigger.net/web-security)
-  * **PentesterLab:** (มีค่าใช้จ่าย) เน้นทำ Web Vulnerability ตรงไปตรงมา ไม่ต้องเดาโจทย์แบบ CTF
-
-
-* **การเจาะระบบเครือข่ายและสภาพแวดล้อมจำลอง (Infrastructure Hacking):**
-  * **TryHackMe:** ปูพื้นฐานและทำความเข้าใจช่องโหว่เป็นขั้นตอน
-  * **Hack The Box (HTB):** ฝึกเจาะระบบในสภาพแวดล้อมที่ซับซ้อนเทียบเท่าองค์กรจริง
-
-
-* **การเจาะระบบระดับล่าง (Binary Exploitation / Reverse Engineering):**
-  * **Pwnable.tw / Pwnable.kr:** โหดและลึกกว่า HTB เหมาะสำหรับสาย Low-level
-
-
-
-**3. หมวดภาษาคอมพิวเตอร์ระดับล่าง (C & Assembly)**
-*เป้าหมาย: อ่านโค้ดเพื่อหาจุดอ่อนการจัดการ Memory และเขียน Payload*
-
-* **C Language:**
-  * **The C Programming Language (Kernighan & Ritchie):** ตำราคลาสสิกสำหรับทำความเข้าใจแก่นของ C (Pointers, Memory Allocation)
-  * **Hacking: The Art of Exploitation (Jon Erickson):** เรียน C ผ่านการทำ Buffer Overflow
-  * **แหล่งฝึกฝน:** [Learn-C.org](https://www.learn-c.org/) (ฝึก Syntax รวดเร็ว)
-
-
-* **Assembly (x86/x64 & ARM):**
-  * **OpenSecurityTraining.info:** คอร์ส Introductory Intel x86
-  * **Practical Reverse Engineering (Bruce Dang):** เจาะลึกกลไก Architecture
-  * **เครื่องมือวิเคราะห์:** [Godbolt Compiler Explorer](https://godbolt.org/) (เทียบ C กับ Assembly แบบ Real-time)
-
-
-* **ขั้นตอนการปฏิบัติ:** เขียน C ง่ายๆ -> Decompile ด้วย GDB หรือ Ghidra -> วิเคราะห์ Assembly Code
-
-**4. หมวดสคริปต์และระบบอัตโนมัติ (Bash & Python for Security)**
-
-* **Bash / Linux Command Line:**
-  * **OverTheWire (Bandit):** Wargame บังคับเล่นสำหรับฝึก Linux CLI เอาตัวรอดระดับรากฐาน [เริ่มเล่นที่นี่](https://overthewire.org/wargames/bandit/)
-  * **Linux Journey:** สรุปคำสั่งระบบปฏิบัติการอย่างเป็นระบบ [บทเรียน 1](https://labex.io/linuxjourney), [บทเรียน 2](https://linuxbasecamp.com/)
-  * **FreeCodeCamp Bash Tutorial:** [พื้นฐานสำหรับผู้เริ่มต้น](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
-
-
-* **Python (Security Tooling):**
-  * **Black Hat Python (2nd Edition):** สอนเขียนโทรจัน สนิฟเฟอร์ และเครื่องมือเครือข่าย (ใช้โมดูล `socket`, `requests`)
-  * **Violent Python:** การใช้ `Scapy` จัดการ Packet, เขียนสคริปต์ Brute-force
-  * **pwntools:** ไลบรารีอาวุธหลักสาย Pwn ใช้ส่ง Payload (C/Assembly) เข้าช่องโหว่
-  * **Python Automation Basics:** [GeeksforGeeks](https://www.geeksforgeeks.org/python/python-automation/)
-
-
-
-**5. ยุทธวิธีการผสานระบบและแผนปฏิบัติการ 30 วัน (Execution Strategy)**
-
-* **The Integration (การทำงานร่วมกันของระบบ):**
-  * **C/Assembly:** ค้นหาช่องโหว่ (เช่น Buffer Overflow) คำนวณ Memory
-  * **Python (pwntools):** จัดการส่ง Shellcode โจมตีเป้าหมายแบบอัตโนมัติ
-  * **Bash:** รับ Reverse Shell, สำรวจเครื่องเป้าหมาย, ยกระดับสิทธิ์ (Privilege Escalation)
-
-
-* **แผน 30 วันสำหรับทะลวงคอขวด (Bash & Python):**
-  * **สัปดาห์ที่ 1-2:** โฟกัส OverTheWire (Bandit) ให้ผ่านอย่างน้อย Level 20 ห้ามเปิดเฉลยทันที ให้อ่าน `man page` เพื่อสร้างกล้ามเนื้อความจำบนหน้า Terminal
-  * **สัปดาห์ที่ 3-4:** ศึกษา Black Hat Python เน้น Network Modules พิมพ์โค้ดด้วยตัวเองทั้งหมด ห้ามคัดลอก/วาง เพื่อทำความเข้าใจโครงสร้างการเชื่อมต่อระดับ Socket
+**1. Chain of Thought: การถอดรหัสและวิเคราะห์โครงสร้างปัญหา**
+เป้าหมายคือการสร้าง Career Roadmap สำหรับ SOC Analyst (Tier 1/2) ที่พร้อมทำงานทันทีในปี 2028 ภายใต้ข้อจำกัดของโครงสร้างหลักสูตรมหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี (RMUTT) เวลาเป็นทรัพยากรที่มีจำกัดที่สุด การแยกส่วนเวลาไปศึกษาสาย Offensive แบบสุ่มทิศทางจะทำให้เกิดความสูญเปล่า ทักษะแกนหลักของ SOC Analyst คือ Network Visibility, Log Triage, และ Detection Engineering กลยุทธ์ "Learn Offensive to Excel in Defensive" ต้องถูกตีกรอบเฉพาะการวิเคราะห์กลไกการโจมตีเพื่อสร้าง Rule ตรวจจับเท่านั้น การฝึกปฏิบัติและโครงงานต้องถูกนำไปใช้ร่วมกับวิชาบังคับ ได้แก่ โครงงาน 1 โครงงาน 2 และสหกิจศึกษา เพื่อลดความซ้ำซ้อนและเพิ่มประสิทธิภาพการสร้าง Portfolio ขั้นสูงสุด
 
 ---
 
-นี่คือการจัดระเบียบและวางโรดแมป (Roadmap) การศึกษาเชิงกลยุทธ์จากคลังข้อมูลที่คุณมี โดยเรียงลำดับจากรากฐานที่ต้องสร้าง ไปจนถึงทักษะขั้นสูงที่สุด การข้ามขั้นตอนจะทำให้เกิดช่องโหว่ในความเข้าใจและทำให้การศึกษาในระดับถัดไปล้มเหลว
+**2. Constructive Disruption: การรื้อถอนข้อผิดพลาดจาก Legacy Roadmap**
+
+* **ข้อผิดพลาดทางตรรกะและข้อมูลหลักสูตร:** Legacy Roadmap 1 กำหนดให้เรียนวิชา Computer Architecture ในปี 2 เทอม 1 ซึ่งขัดแย้งกับหลักสูตรจริงที่ถูกกำหนดไว้ในปี 1 เทอม 2 (09-141-107) การศึกษา Assembly หรือ Emu8086 ในชั้นปีที่ 2 จึงเป็นการเสียเวลาและไม่สอดคล้องกับโครงสร้างจริง
+
+
+* **การลงทุนเวลาที่ผิดพลาด (Poor Time ROI):** Legacy Roadmap 2 มุ่งเน้นไปที่ Binary Exploitation (Pwnable, Buffer Overflow, C/Assembly) อย่างหนัก ทักษะเหล่านี้มีความสำคัญต่อ Exploit Developer แต่มี Return on Investment (ROI) เข้าใกล้ศูนย์สำหรับ SOC Analyst (Tier 1/2) ที่ต้องใช้เวลาส่วนใหญ่กับ SIEM, PCAP และ EDR
+
+
+* **แนวทางแก้ไข:** ตัดเนื้อหา Low-level Exploitation ทิ้งทั้งหมด เปลี่ยนทรัพยากรเวลาไปลงทุนในระบบโครงสร้างพื้นฐาน การวิเคราะห์ทราฟฟิก และการทำระบบอัตโนมัติ (SOAR) โดยผูกโครงงานเข้ากับแผนการศึกษาที่ระบุไว้ในหลักสูตร โดยตรง
 
 ---
 
-### **Phase 1: Core Infrastructure & OS (รากฐานโครงสร้างและระบบปฏิบัติการ)**
+**3. Ultimate SOC Analyst Career Roadmap (2026-2028)**
 
-คุณไม่สามารถโจมตีหรือป้องกันระบบที่คุณไม่เข้าใจกลไกการทำงานได้ นี่คือจุดเริ่มต้นที่บังคับต้องผ่าน
+**Year 2, Term 1: Infrastructure Visibility & Log Generation**
 
-* **ทฤษฎีและการจัดการเครือข่าย:**
-  * เริ่มต้นด้วย *Computer Networking: A Top-Down Approach (8th Edition)* เพื่อเข้าใจกลไกโปรโตคอลตั้งแต่ Application ลงมาถึง Physical
-  * ต่อยอดด้วย *CCNA 200-301* เพื่อการคอนฟิกฮาร์ดแวร์จริง ควบคู่กับช่อง YouTube: *Jeremy's IT Lab* และ *NetworkChuck*
+* **Hard Skills Focus:** System Administration, Network Traffic Analysis, Database Logging. สอดคล้องกับรายวิชาบังคับ: ระบบปฏิบัติการ (09-141-206), เครือข่ายคอมพิวเตอร์ (09-142-202), ระบบจัดการฐานข้อมูล (09-142-205)
 
 
-* **ระบบปฏิบัติการและการเอาตัวรอด (Linux/Bash):**
-  * อ่าน *UNIX and Linux System Administration Handbook* เพื่อเข้าใจสถาปัตยกรรมเซิร์ฟเวอร์
-  * ฝึกปฏิบัติทันทีผ่าน *OverTheWire (Bandit)* โดยใช้แหล่งอ้างอิงจาก *Linux Journey*, *Linuxbasecamp*, และ *FreeCodeCamp Bash Scripting Tutorial*
+* **Hands-on Labs:**
+    * สร้างระบบ Enterprise Network จำลอง (Windows/Linux) และกำหนดค่า Span Port/Mirror Port เพื่อดักจับทราฟฟิก
+    * เปิดใช้งาน Audit Policy บน Windows และ Syslog บน Linux เพื่อส่ง Log ฐานข้อมูลและระบบปฏิบัติการไปยังส่วนกลาง
 
 
-* **การจัดการระดับองค์กร:**
-  * อ่าน *Site Reliability Engineering: How Google Runs Production Systems* เพื่อเข้าใจการสเกลระบบและกระบวนการทำงานระดับโลก
+* **Curated Reading List:**
+    * *Computer Networking: A Top-Down Approach*: เจาะจง Chapter 1-4 เพื่อวิเคราะห์กลไกของ Application ถึง Network Layer จากมุมมองการดักจับแพ็กเก็ต
+    * *UNIX and Linux System Administration Handbook*: เจาะจง Chapter 1, 5, และ 12 เพื่อทำความเข้าใจกระบวนการทำงานและเครือข่ายของระบบปฏิบัติการ
 
 
+* **Missing Gaps (อุดช่องโหว่):** ขาดความเข้าใจด้านกลไกของ Windows OS ซึ่งเป็นเป้าหมายหลักในการโจมตี เสนอให้อ่าน *Microsoft Sysinternals Administrator's Reference* (ฟรี) เพื่อวิเคราะห์ Windows Event Logs, Processes และ Registry
+* **Milestone:** วัดผลความเข้าใจระบบเครือข่ายเทียบเท่า CompTIA Network+
 
-### **Phase 2: Security Architecture & Analysis (สถาปัตยกรรมความปลอดภัยและการวิเคราะห์)**
+---
 
-เมื่อเข้าใจระบบแล้ว ต้องเรียนรู้วิธีตรวจสอบและมาตรฐานการป้องกัน
+**Year 2, Term 2: Offensive Mechanics & Alert Triage**
 
-* **มาตรฐานระดับสากล:**
-  * ศึกษา *NIST Cybersecurity Framework* และ *NIST.CSWP.29*
-  * ศึกษา *OWASP Top 10 Project* เพื่อทำความเข้าใจช่องโหว่ยอดฮิตระดับโลก
-
-
-* **การวิเคราะห์พฤติกรรมเครือข่าย:**
-  * ศึกษา *Practical Packet Analysis* เพื่อจับตาดูทราฟฟิกที่ผิดปกติผ่าน Wireshark
+* **Hard Skills Focus:** Web Attack Vectors, Vulnerability Identification, Packet Parsing. สอดคล้องกับรายวิชาบังคับ: ความมั่นคงทางเทคโนโลยีสารสนเทศ (09-142-214)
 
 
-
-### **Phase 3: Offensive Scripting (การเขียนสคริปต์เชิงรุก)**
-
-เปลี่ยนจากผู้ใช้ (User) เป็นผู้สร้างเครื่องมือ (Tool Creator)
-
-* **การพัฒนา Python สู่ Security Tooling:**
-   * ศึกษาบทความ *Python Automation (GeeksforGeeks)* เพื่อปรับพื้นฐาน
-   * เจาะลึกผ่านหนังสือ *Black Hat Python, 2nd Edition* เพื่อสร้างเครื่องมือดักจับหรือโจมตี และ *Violent Python* สำหรับแนวทางประยุกต์ใช้เพิ่มเติม
+* **Hands-on Labs:**
+    * ใช้ Kali Linux ยิงการโจมตีพื้นฐาน (SQLi, XSS) ใส่เซิร์ฟเวอร์จำลอง
+    * ใช้ Wireshark สกัด PCAP จากการโจมตี เพื่อเปรียบเทียบ Signature ระหว่าง Normal Traffic และ Malicious Traffic
 
 
-
-### **Phase 4: Web Application Security (ความปลอดภัยระดับเว็บแอปพลิเคชัน)**
-
-สนามทดสอบที่เข้าถึงง่ายที่สุดและเป็นรากฐานของสาย Bug Bounty
-
-* **คู่มือและตำราเจาะระบบ:**
-  * อ่าน *The Web Application Hacker's Handbook* (ทฤษฎีคลาสสิก) ตามด้วย *Bug Bounty Bootcamp* (วิธีการทำเงินและเทคนิคสมัยใหม่)
+* **Curated Reading List:**
+    * *Practical Packet Analysis*: เจาะจง Chapter 3-7 (เน้นการแยกแยะทราฟฟิกที่ผิดปกติ)
+    * *The Web Application Hacker's Handbook*: เจาะจง Chapter 1-4 (อ่านเพื่อทำความเข้าใจว่า Web Attack ทิ้งร่องรอยอะไรไว้ใน HTTP Access Logs บ้าง)
+    * *O'Reilly Network Security Assessment*: เจาะจง Chapter 1-3 เพื่อประเมินความเสี่ยงเชิงโครงสร้าง
 
 
-* **แพลตฟอร์มฝึกฝนบังคับ:**
-  * ลุยแล็บใน *PortSwigger Web Security Academy* ให้ครบทุกหัวข้อ
+* **Milestone:** เตรียมสอบ Cisco CyberOps Associate (200-201)
+
+---
+
+**Year 3, Term 1: Server Defense & Threat Intelligence**
+
+* **Hard Skills Focus:** Server Hardening, Security Scripting, Log Normalization. สอดคล้องกับรายวิชาบังคับ: การบริหารจัดการเครื่องแม่ข่าย (09-142-393)
 
 
-
-### **Phase 5: Infrastructure Penetration Testing (การเจาะระบบเครือข่ายระดับองค์กร)**
-
-ยกระดับจากการเจาะเว็บ สู่การยึดเซิร์ฟเวอร์และเครือข่ายทั้งหมด
-
-* **ยุทธวิธีการเจาะระบบ:**
-  * ศึกษา *Network Security Assessment* เพื่อการประเมินความเสี่ยง และ *The Hacker Playbook 3* สำหรับแผนการรุกแบบ Red Team
+* **Hands-on Labs:**
+    * ประยุกต์ใช้ Python สคริปต์เพื่อดึงข้อมูลจาก Log ของเครื่องแม่ข่าย และเชื่อมต่อกับ Threat Intelligence API (เช่น VirusTotal) เพื่อจำแนก IP อันตราย
 
 
-* **แพลตฟอร์มจำลองสภาพแวดล้อมจริง:**
-  * เริ่มที่ *TryHackMe* (สำหรับปูพื้นฐาน) และย้ายไป *Hack The Box (HTB)* (สำหรับสภาพแวดล้อมทางธุรกิจจริง)
+* **Curated Reading List:**
+    * *Violent Python* / *Black Hat Python*: เจาะจง Chapter 2-3 ประยุกต์ใช้ความรู้ฝั่งโจมตีมาเขียนสคริปต์เพื่อตรวจสอบ Command & Control (C2) Channels
+    * *Site Reliability Engineering*: เจาะจง Chapter 3-4 (ประยุกต์ใช้แนวคิด SLOs กับการวัดผล SLA ในการตอบสนองต่อ Alert ของ SOC)
 
 
+* **Missing Gaps (อุดช่องโหว่):** ขาดทักษะการตรวจสอบบนคลาวด์ เสนอให้ใช้ *Microsoft Learn: SC-200 (Security Operations Analyst)* (ฟรี) เพื่อทำความเข้าใจ Azure AD Logs และ Microsoft Sentinel
 
-### **Phase 6: Low-Level Exploitation & Reverse Engineering (ขั้นสุดยอด: เจาะระบบระดับล่าง)**
+---
 
-ศาสตร์ที่ยากที่สุด ต้องใช้ความเข้าใจหน่วยความจำภาษา C และ Assembly
+**Year 3, Term 2: Detection Engineering (Project 1 Integration)**
 
-* **ทำความเข้าใจโค้ดและหน่วยความจำ:**
-  * อ่าน *Hacking - The Art of Exploitation* เล่มนี้จะเชื่อมโยง C, Assembly และการทำ Buffer Overflow เข้าด้วยกัน
-
-
-* **การวิเคราะห์มัลแวร์:**
-  * ศึกษา *Practical Malware Analysis* เพื่อทำ Reverse Engineering
+* **Hard Skills Focus:** SIEM Implementation, Custom Detection Rules, IoT Security. สอดคล้องกับรายวิชาบังคับ: ระบบฝังตัวและอินเทอร์เน็ตทุกสรรพสิ่ง (09-142-302), การบริหารจัดการโครงการ (09-142-394), และ โครงงานด้านเทคโนโลยีสารสนเทศ 1 (09-142-316)
 
 
-* **แพลตฟอร์มฝึกฝน:**
-  * ฝึกฝนผ่าน *Pwnable.tw* และ *Pwnable.kr*
+* **Hands-on Labs (เชื่อมโยง Project 1):**
+    * **หัวข้อ Project 1:** "การออกแบบและติดตั้ง Open-Source SIEM (Wazuh/Elastic) เพื่อตรวจจับภัยคุกคามทางเครือข่ายและ IoT"
+    * จำลองสถานการณ์โจมตี (Red Team) ตามคู่มือ และสร้าง Rule บน SIEM (Blue Team) เพื่อให้เกิด Alert ที่แม่นยำ (ลด False Positives)
+
+
+* **Curated Reading List:**
+    * *The Hacker Playbook 3*: โฟกัสกระบวนการและ TTPs (Tactics, Techniques, and Procedures) เพื่อนำมาสร้าง Use Case ทบทวนและเขียน Detection Rule
+    * *NIST-Cybersecurity-Framework-CSF-2.0-แปลไทย*: ประยุกต์ใช้แกนหลัก (Identify, Protect, Detect, Respond, Recover) ในเอกสารโครงงาน
+
+
+* **Milestone:** สอบใบประกาศนียบัตร BTL1 (Blue Team Level 1) หรือ CompTIA Security+ เพื่อยืนยันขีดความสามารถก่อนเข้าสู่ตลาดแรงงาน
+
+---
+
+**Year 4, Term 1: Real-World Triage (สหกิจศึกษา)**
+
+* **Hard Skills Focus:** Incident Triage, EDR Analysis, SOC Bottleneck Identification. สอดคล้องกับรายวิชาบังคับ: สหกิจศึกษาทางเทคโนโลยีสารสนเทศ (09-144-402)
+
+
+* **Hands-on Labs:**
+    * ปฏิบัติงานจริงในฐานะ Tier 1 SOC Analyst
+    * วิเคราะห์ปัญหาและคอขวด (Bottlenecks) ในกระบวนการ Incident Response ของบริษัท เพื่อรวบรวมเป็นโจทย์สำหรับ Project 2
+
+
+* **Curated Reading List:**
+    * *Practical Malware Analysis*: เจาะจง Chapter 1-3 (Basic Static & Dynamic Analysis) เพื่อการแยกแยะไฟล์ต้องสงสัยอย่างรวดเร็ว (Triage) ระหว่างปฏิบัติงาน
+    * *Bug Bounty Bootcamp*: เจาะจง Chapter 1-3 เพื่อทำความเข้าใจโครงสร้างช่องโหว่และจัดลำดับความรุนแรง
+
+
+* **Missing Gaps (อุดช่องโหว่):** กระบวนการตอบสนองอุบัติการณ์ระดับสากล เสนอให้ใช้ *NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide* เป็นมาตรฐานอ้างอิงในการทำงาน
+
+---
+
+**Year 4, Term 2: Advanced Defense & Market Readiness (Project 2 Integration)**
+
+* **Hard Skills Focus:** Security Orchestration, Automation and Response (SOAR), Advanced Threat Hunting. สอดคล้องกับรายวิชาบังคับ: มิติทางสังคมและจริยธรรมสำหรับนักเทคโนโลยีสารสนเทศ (09-142-415), โครงงานด้านเทคโนโลยีสารสนเทศ 2 (09-142-417)
+
+
+* **Hands-on Labs (เชื่อมโยง Project 2):**
+    * **หัวข้อ Project 2:** "การพัฒนาระบบตอบสนองภัยคุกคามอัตโนมัติ (SOAR) เบื้องต้นด้วย Python ควบคู่กับ SIEM"
+    * นำคอขวดที่พบจากช่วงสหกิจศึกษามาแก้ปัญหาด้วยการเขียนสคริปต์อัตโนมัติเพื่อระงับเหตุ (เช่น บล็อก IP บน Firewall อัตโนมัติเมื่อ SIEM แจ้งเตือน)
+
+
+* **Curated Reading List:**
+    * ไม่มีการเพิ่มหนังสือใหม่ เน้นนำทฤษฎีจาก *Site Reliability Engineering* และทักษะ Python จาก *Violent Python* มาสร้างเป็น Product เชิงวิศวกรรมในระดับ Production-grade
+
+
+* **Milestone:** พร้อมเข้าสู่ตลาดแรงงาน 100% ในฐานะ SOC Analyst ที่มีประสบการณ์จริงและมีระบบ SOAR/SIEM ใน Portfolio (แนะนำให้พิจารณาสอบ CCD - Certified CyberDefender หรือ CompTIA CySA+)
+
+---
+
+**4. Self-Evaluation: การประเมินความสมเหตุสมผลเชิงตรรกะ**
+โครงสร้างนี้ตัดเนื้อหาทฤษฎีทาง Offensive ที่ลึกเกินความจำเป็นออกอย่างเด็ดขาดและเชื่อมโยงทักษะทางเทคนิคระดับสูงเข้ากับรายวิชาในหลักสูตรของมหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี (มคอ.2) อย่างแม่นยำแบบเทอมต่อเทอม ช่วยให้ผู้เรียนประหยัดเวลา ไม่ต้องทำงานซ้ำซ้อน นำ Lab ที่ฝึกฝนมาส่งเป็นโครงงาน (Project 1 และ 2) ได้ทันที ตอบโจทย์หลักการ First Principles Thinking และ Practical Feasibility อย่างสมบูรณ์แบบ แผนงานมีความหนาแน่นสูงและมุ่งเป้าสู่ความเป็นเลิศในสาย Blue Team อย่างแท้จริง
