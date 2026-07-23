@@ -37,23 +37,26 @@
 
 ---
 
-**Year 2, Term 2: Offensive Mechanics & Alert Triage**
+**Year 2, Term 2: Automated Adversary Emulation & Alert Triage**
 
-* **Hard Skills Focus:** Web Attack Vectors, Vulnerability Identification, Packet Parsing. สอดคล้องกับรายวิชาบังคับ: ความมั่นคงทางเทคโนโลยีสารสนเทศ (09-142-214)
+* **Hard Skills Focus:** Automated Emulation, Threat Detection, Log Analysis, MITRE ATT&CK Framework. สอดคล้องกับรายวิชาบังคับ: ความมั่นคงทางเทคโนโลยีสารสนเทศ (09-142-214) และกลุ่มวิชาชีพเลือก
 
 
 * **Hands-on Labs:**
-    * ใช้ Kali Linux ยิงการโจมตีพื้นฐาน (SQLi, XSS) ใส่เซิร์ฟเวอร์จำลอง
-    * ใช้ Wireshark สกัด PCAP จากการโจมตี เพื่อเปรียบเทียบ Signature ระหว่าง Normal Traffic และ Malicious Traffic
+   * ติดตั้งแพลตฟอร์ม Automated Adversary Emulation (MITRE Caldera หรือ Atomic Red Team) ลงในสภาพแวดล้อมจำลอง (Endpoint แบบเปิดใช้งาน Sysmon)
+   * รันสคริปต์จำลองพฤติกรรมภัยคุกคามเป้าหมาย 4 Tactics เชิงลึก: Initial Access (T1190, T1566), Execution (T1059.001, T1047), Credential Access (T1003.001, T1110), และ Command and Control (T1071.001, T1568.002)
+   * สกัด Log (Windows Event Logs, Sysmon, Zeek) เพื่อเขียนและทดสอบ Detection Rule
 
 
 * **Curated Reading List:**
-    * *Practical Packet Analysis*: เจาะจง Chapter 3-7 (เน้นการแยกแยะทราฟฟิกที่ผิดปกติ)
-    * *The Web Application Hacker's Handbook*: เจาะจง Chapter 1-4 (อ่านเพื่อทำความเข้าใจว่า Web Attack ทิ้งร่องรอยอะไรไว้ใน HTTP Access Logs บ้าง)
-    * *O'Reilly Network Security Assessment*: เจาะจง Chapter 1-3 เพื่อประเมินความเสี่ยงเชิงโครงสร้าง
+   * *Practical Packet Analysis*: โฟกัส Chapter 3-7 (ประยุกต์ใช้เพื่อแยกแยะ C2 Beaconing และ DNS DGA ออกจากทราฟฟิกปกติ)
+   * *MITRE ATT&CK Framework Documentation (Online)*: ศึกษากลไกและ Data Sources ของ T-Codes ทั้ง 8 เทคนิคเป้าหมายเพื่อหาจุดเข้าทำ Triage
 
 
-* **Milestone:** เตรียมสอบ Cisco CyberOps Associate (200-201)
+* **Milestone & Measurable KPIs:**
+   * **KPI 1:** สามารถสร้าง Custom Detection Rules (Sigma rules) ที่ดักจับครอบคลุม 10 เทคนิคหลักใน MITRE ATT&CK Framework
+   * **KPI 2:** อัตราการเกิด False Positive ต้องต่ำกว่า 5% เมื่อทดสอบรัน Rule กับ Normal Traffic
+   * เตรียมความพร้อมสำหรับ Cisco CyberOps Associate (200-201)
 
 ---
 
@@ -113,21 +116,27 @@
 
 ---
 
-**Year 4, Term 2: Advanced Defense & Market Readiness (Project 2 Integration)**
+**Year 4, Term 2: Enterprise SOAR Architecture & Market Readiness**
 
-* **Hard Skills Focus:** Security Orchestration, Automation and Response (SOAR), Advanced Threat Hunting. สอดคล้องกับรายวิชาบังคับ: มิติทางสังคมและจริยธรรมสำหรับนักเทคโนโลยีสารสนเทศ (09-142-415), โครงงานด้านเทคโนโลยีสารสนเทศ 2 (09-142-417)
+* **Hard Skills Focus:** Security Orchestration, Automation and Response (SOAR), API Integration, Advanced Incident Response. สอดคล้องกับรายวิชาบังคับ: โครงงานด้านเทคโนโลยีสารสนเทศ 2 (09-142-417) และ มิติทางสังคมและจริยธรรมสำหรับนักเทคโนโลยีสารสนเทศ (09-142-415)
 
 
-* **Hands-on Labs (เชื่อมโยง Project 2):**
-    * **หัวข้อ Project 2:** "การพัฒนาระบบตอบสนองภัยคุกคามอัตโนมัติ (SOAR) เบื้องต้นด้วย Python ควบคู่กับ SIEM"
-    * นำคอขวดที่พบจากช่วงสหกิจศึกษามาแก้ปัญหาด้วยการเขียนสคริปต์อัตโนมัติเพื่อระงับเหตุ (เช่น บล็อก IP บน Firewall อัตโนมัติเมื่อ SIEM แจ้งเตือน)
+* **Hands-on Labs (Project 2 Integration):**
+   * **หัวข้อ Project 2:** "การบูรณาการ Open-Source SOAR เพื่อลดระยะเวลาตอบสนองอุบัติการณ์ทางไซเบอร์แบบอัตโนมัติ"
+   * ติดตั้งและปรับแต่ง SOAR Platform ระดับอุตสาหกรรม (Shuffle หรือ n8n)
+   * ใช้ Python พัฒนา Custom Script หรือ Playbooks เพื่อเชื่อมต่อ API ระหว่าง SIEM, Threat Intelligence (เช่น VirusTotal/AbuseIPDB), และระบบป้องกัน (Firewall/EDR)
+   * สร้าง Workflow ระงับเหตุอัตโนมัติ (เช่น บล็อก IP หรือ Isolate Host ทันทีเมื่อ SIEM ตรวจพบเงื่อนไขที่ตรงกับ Rule จาก Project 1)
 
 
 * **Curated Reading List:**
-    * ไม่มีการเพิ่มหนังสือใหม่ เน้นนำทฤษฎีจาก *Site Reliability Engineering* และทักษะ Python จาก *Violent Python* มาสร้างเป็น Product เชิงวิศวกรรมในระดับ Production-grade
+   * *Site Reliability Engineering*: เจาะจง Chapter 3-4 ประยุกต์ใช้แนวคิดวิศวกรรมเพื่อควบคุม Service Level Objectives (SLOs) และวัดผลความเร็วในการตอบสนอง
+   * *REST API Documentation*: ศึกษาคู่มือการเชื่อมต่อ API ของเครื่องมือความปลอดภัยเป้าหมาย (Elastic, Wazuh, n8n)
 
 
-* **Milestone:** พร้อมเข้าสู่ตลาดแรงงาน 100% ในฐานะ SOC Analyst ที่มีประสบการณ์จริงและมีระบบ SOAR/SIEM ใน Portfolio (แนะนำให้พิจารณาสอบ CCD - Certified CyberDefender หรือ CompTIA CySA+)
+* **Milestone & Measurable KPIs:**
+   * **KPI 1:** ลด Mean Time to Respond (MTTR) ของกระบวนการ Triage และ Containment ลงอย่างน้อย 80% เมื่อเทียบกับการทำงานแบบ Manual (เป้าหมาย: ต่ำกว่า 3 นาทีต่อ 1 Alert)
+   * บรรลุสถานะ Market Readiness พร้อมเข้าทำงานในตำแหน่ง SOC Analyst (Tier 1/2) ที่มีประสบการณ์วิศวกรรมระบบ SOAR
+   * สอบใบประกาศนียบัตรระดับกลาง-สูง: CCD (Certified CyberDefender) หรือ CompTIA CySA+
 
 ---
 
